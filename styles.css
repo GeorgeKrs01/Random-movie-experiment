@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(35, 35, 37);
+  color: white;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  margin: 10px;
+  /* border-radius: 0.25rem; */
+}
+
+.card-body {
+  background-color: #591212; /* Change to your desired color */
+}
+
+/* Card Zoom Effect */
+.card {
+  transition: transform 0.4s ease; /* Smooth transition for zoom effect */
+  filter: blur(0px);
+}
+
+.card:hover {
+  transform: scale(1.15);
+  z-index: 1;
+  /* filter: blur(3px);
+  transition: filter 0.3s ease;  */
+}
+
+.container:hover .card {
+  filter: blur(3px);
+}
+
+.container .card:hover {
+  filter: blur(0px);
+}
+
+.col-6 {
+  text-align: center;
+  padding: 2rem;
+  max-width: 80%;
+}
+
+.btn {
+  transition: transform 0.1s ease; /* Smooth transition for button transform */
+}
+
+.btn:active {
+  transform: translateY(4px);
+}
+
+input[type="text"] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid rgb(210, 210, 210);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgb(210, 210, 210);
+  background-image: url("searchicon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out, opacity 0.1s ease-in-out;
+  opacity: 70%;
+}
+
+input[type="text"]:focus {
+  width: 100%;
+  opacity: 100%;
+  background-color: rgb(237, 237, 237);
+}

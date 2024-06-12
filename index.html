@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Navbar with Black Background</title>
+    <script src="main.js"></script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -35,15 +36,6 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li> -->
         </ul>
       </div>
     </nav>
@@ -53,10 +45,23 @@
     </form>
 
     <div class="container mt-5 d-grid gap-2 col-6 mx-auto">
-      <button type="button" class="btn btn-danger btn-lg d-grid gap-2 col-6">
+      <button
+        type="button"
+        id="myBtn"
+        class="btn btn-danger btn-lg d-grid gap-2 col-6"
+      >
         Randomize!
       </button>
     </div>
+
+    <script>
+      document.getElementById("myBtn").addEventListener("click", displayDate);
+
+      function displayDate() {
+        fetchMovieData();
+        console.log("button was clicked");
+      }
+    </script>
 
     <div class="gamw">
       <div class="container mt-5">
@@ -65,7 +70,7 @@
           <div class="col-md-4">
             <div class="card">
               <img
-                src="./Electrotachyscope1.jpg"
+                src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
                 class="card-img-top"
                 alt="Card image 1"
               />
@@ -83,7 +88,7 @@
           <div class="col-md-4">
             <div class="card">
               <img
-                src="./Electrotachyscope1.jpg"
+                src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
                 class="card-img-top"
                 alt="Card image 2"
               />
@@ -101,7 +106,7 @@
           <div class="col-md-4">
             <div class="card">
               <img
-                src="./Electrotachyscope1.jpg"
+                src="https://image.tmdb.org/t/p/w500/eKpK8FaQDpkgp3HHm3YrIDqUjWh.jpg"
                 class="card-img-top"
                 alt="Card image 3"
               />

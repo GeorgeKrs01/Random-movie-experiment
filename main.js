@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function fetchMovieData() {
-  const apiKey = "1bf593f34376b412e19619f40b226759";
+  const apiKey = "randomApiKey";
 
   // Generate three different random movie IDs
   const movieIds = [getRandomInt(2000), getRandomInt(2000), getRandomInt(2000)];

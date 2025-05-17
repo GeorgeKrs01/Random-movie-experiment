@@ -1,6 +1,31 @@
 body {
-  background-color: rgb(35, 35, 37);
+  /* background: linear-gradient(to bottom, #3e2b2f, #855684, #3d2059); */
+  background: linear-gradient(to bottom, #3e2b2f 0%, #855684 50%, #3d2059 100%);
   color: white;
+}
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: black;
+}
+
+.big-btn {
+  width: 150%;
+  max-width: 500px;
+  max-height: 200px;
+}
+
+.form-inline {
+  background-color: aliceblue;
+}
+.custom-navbar {
+  background-color: rgb(46, 5, 97);
+}
+
+.navbar-brand {
+  color: rgba(219, 22, 94, 0.899);
 }
 
 /* Card Styling */
@@ -11,13 +36,16 @@ body {
 }
 
 .card-body {
-  background-color: #591212; /* Change to your desired color */
+  background-color: #47a0a8; /* Change to your desired color */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* Card Zoom Effect */
 .card {
   transition: transform 0.4s ease; /* Smooth transition for zoom effect */
   filter: blur(0px);
+  border-radius: 5px;
 }
 
 .card:hover {
@@ -43,6 +71,13 @@ body {
 
 .btn {
   transition: transform 0.1s ease; /* Smooth transition for button transform */
+  background-color: #f2466be2;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #a92b47e2;
+  transition: 0.1s ease;
 }
 
 .btn:active {

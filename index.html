@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap Navbar with Black Background</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Random Movie Generator</title>
     <script src="main.js"></script>
 
     <!-- Bootstrap CSS -->
@@ -14,9 +21,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
-  </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-expand-lg custom-navbar">
       <a class="navbar-brand" href="#">BrandName</a>
       <button
         class="navbar-toggler"
@@ -38,145 +44,105 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
 
-    <form>
-      <input type="text" name="search" placeholder="Search.." />
-    </form>
+    <!-- <form>
+      <input
+        class="form-inline"
+        type="text"
+        name="search"
+        placeholder="Search.."
+      />
+    </form> -->
 
     <div class="container mt-5 d-grid gap-2 col-6 mx-auto">
       <button
         type="button"
         id="myBtn"
-        class="btn btn-danger btn-lg d-grid gap-2 col-6"
+        class="big-btn btn d-grid gap-2 col-6 merriweather-black-italic"
       >
-        Randomize!
+        Randomize it!
       </button>
     </div>
 
-    <script>
-      document.getElementById("myBtn").addEventListener("click", displayDate);
-
-      function displayDate() {
-        fetchMovieData();
-        console.log("button was clicked");
-      }
-    </script>
-
-    <div class="gamw">
-      <div class="container mt-5">
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
-                class="card-img-top"
-                alt="Card image 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card Title 1</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <!-- <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
-                class="card-img-top"
-                alt="Card image 2"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card Title 2</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://image.tmdb.org/t/p/w500/eKpK8FaQDpkgp3HHm3YrIDqUjWh.jpg"
-                class="card-img-top"
-                alt="Card image 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card Title 3</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="./Electrotachyscope1.jpg"
-                class="card-img-top"
-                alt="Card image 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card Title 4</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="./Electrotachyscope1.jpg"
-                class="card-img-top"
-                alt="Card image 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card Title 5</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="./Electrotachyscope1.jpg"
-                class="card-img-top"
-                alt="Card image 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card Title 6</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div id="card1" class="card">
+            <img
+              src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
+              class="card-img-top"
+              alt="Card image 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card Title 1</h5>
+              <p class="card-text-year">Year</p>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p class="card-votes"></p>
+              <a href="#" class="btn btn-primary" target="_blank">Search It!</a>
             </div>
           </div>
         </div>
-      </div> -->
-
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div id="card2" class="card">
+            <img
+              src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
+              class="card-img-top"
+              alt="Card image 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card Title 1</h5>
+              <p class="card-text-year">Year</p>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p class="card-votes"></p>
+              <a href="#" class="btn btn-primary" target="_blank">Search It!</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div id="card3" class="card">
+            <img
+              src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
+              class="card-img-top"
+              alt="Card image 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card Title 1</h5>
+              <p class="card-text-year">Year</p>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p class="card-votes"></p>
+              <a href="#" class="btn btn-primary" target="_blank">Search It!</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <button id="saveButton" class="btn btn-secondary">Save Failed IDs</button>
   </body>
+
+  <script>
+    document.getElementById("myBtn").addEventListener("click", displayDate);
+
+    function displayDate() {
+      fetchMovieData();
+      console.log("button was clicked");
+    }
+  </script>
 </html>
